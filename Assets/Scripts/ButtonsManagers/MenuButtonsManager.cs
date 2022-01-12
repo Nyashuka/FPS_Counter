@@ -15,8 +15,14 @@ public class MenuButtonsManager : MonoBehaviour
         obj.SetActive(false);
     }
 
-    public void LoadScene()
+    public void LoadScene(int sceneIndex)
     {
-        SceneManager.LoadScene(1);
+        Time.timeScale = 1.0f;
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
