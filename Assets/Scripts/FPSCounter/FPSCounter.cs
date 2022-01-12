@@ -6,6 +6,7 @@ public class FPSCounter : MonoBehaviour
     private int _frameRange = 60;
 
     private int _fpsRangeCounter;
+
     private int _fpsSum = 0;
 
     public int FPS { get; private set; }
@@ -24,4 +25,6 @@ public class FPSCounter : MonoBehaviour
             _fpsRangeCounter = 0;
         }
     }
+
+
 }
