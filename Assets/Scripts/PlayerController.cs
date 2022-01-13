@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _jumpForce = 100f;
 
     private bool _isGrounded;
     private Vector3 _velocity;
-    private float _gravityForce = -9.81f;
+    private float _gravityForce = -9.81f * 3f;
     private CharacterController _characterController;
 
     private void Start()
@@ -29,10 +29,10 @@ public class PlayerController : MonoBehaviour
                          transform.forward * Input.GetAxis("Vertical"); ;
         _characterController.Move(move * Time.deltaTime * _speed);
 
-        if (move != Vector3.zero)
-        {
-            gameObject.transform.forward = move;
-        }
+        //if (move != Vector3.zero)
+        //{
+        //    gameObject.transform.forward = move;
+        //}
 
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
@@ -41,9 +41,6 @@ public class PlayerController : MonoBehaviour
 
         _velocity.y += _gravityForce * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
-        //MoveCharacter();
-        //Jump();
-        //Gravity();
     }
 
     private void MoveCharacter()
