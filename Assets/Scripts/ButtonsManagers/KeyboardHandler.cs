@@ -14,7 +14,14 @@ public class KeyboardHandler : MonoBehaviour
 
     private void SetPause()
     {
-        Cursor.lockState = CursorLockMode.None;
+        if(_pauseMenuPanel.activeSelf)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
 
         _pauseMenuPanel.SetActive(!_pauseMenuPanel.activeSelf);
 
