@@ -21,7 +21,7 @@ public class ResolutionSettings : MonoBehaviour
 
     private string[] GetResolutionTitles()
     {
-        resolutions = Screen.resolutions.Distinct().ToArray();
+        resolutions = Screen.resolutions.ToArray();
 
         string[] resolutionTitles = new string[resolutions.Length];
         for (int i = 0; i < resolutions.Length; i++)
@@ -29,7 +29,7 @@ public class ResolutionSettings : MonoBehaviour
             resolutionTitles[i] = resolutions[i].width + "x" + resolutions[i].height;
         }
 
-        return resolutionTitles;
+        return resolutionTitles.Distinct<string>().ToArray();
     }
 
     private int GetCurrentResolution()

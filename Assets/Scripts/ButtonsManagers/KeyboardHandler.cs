@@ -3,12 +3,17 @@ using UnityEngine;
 public class KeyboardHandler : MonoBehaviour
 {
     [SerializeField] private GameObject _pauseMenuPanel;
+    [SerializeField] private GameObject _inventory;
     
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             SetPause();
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            _inventory.SetActive(!_inventory.active);
         }
     }
 

@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pauseMenuPanel: {fileID: 1389991204}
+  _inventory: {fileID: 2087138096}
 --- !u!4 &118959044
 Transform:
   m_ObjectHideFlags: 0
@@ -4590,7 +4591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2087138097
 Transform:
   m_ObjectHideFlags: 0

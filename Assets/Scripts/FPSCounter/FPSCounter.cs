@@ -25,6 +25,4 @@ public class FPSCounter : MonoBehaviour
             _fpsRangeCounter = 0;
         }
     }
-
-
 }
